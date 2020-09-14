@@ -36,6 +36,12 @@ namespace WebApp.Library.Ciphers
             for (int i = 0; i < arrLength; i++)
             {
                 int index = letterNumbers[i] + num;
+                
+                if (index < 0)
+                {
+                    index = printLength - Math.Abs(index % printLength);
+                }
+
 
                 index %= printLength;
 
@@ -47,7 +53,9 @@ namespace WebApp.Library.Ciphers
 
         public string Undo_ShiftBy(string x, int num)
         {
-            return x;
+            int temp = num * (-1);
+
+            return ShiftBy(x, temp); ;
         }
     }
 }
