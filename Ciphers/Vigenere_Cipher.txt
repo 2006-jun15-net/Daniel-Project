@@ -1,0 +1,8 @@
+a single word is used as a key. The words letters are converted into their respective numeric value (use ASCII)
+
+These numbers are than used as the shift for each letter to be encrypted, in a pattern.
+
+Example: if just using the alphabet one can use the key "point": this converts to the numbers 16, 15, 9, 14, 20.
+	this pattern will than be used to shift the letters to be encrypted.
+
+Security Value: Secure, this is far better than a regular shift.

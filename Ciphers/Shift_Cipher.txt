@@ -1,0 +1,8 @@
+Replace each alphabet by another alphabet which was shifted by 'x'.
+
+example: shifted 3 to the right: Dog = Grj
+
+-can be expanded on by using ASCII - American Standard Code for Information Interchange and shuffleing based on that or
+adjusting based on an array of all common symbols.
+
+Security Value: Not Secure. With only a relatively small array(26+) it can be brute forced.

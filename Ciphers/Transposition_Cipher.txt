@@ -1,0 +1,6 @@
+Arrange the text horizontally in a table with a number of columns equal to a key value (some number).
+than read the text top-down, left-right to encrypt.
+
+Example: key(4). "high five" = high, fiv,e = "h eifgihv"
+
+Security Value: Good

@@ -1,0 +1,7 @@
+This method should be combined with atleast one other to increase security value.
+
+based on a key(3,2) this will add the corrisponding symbol based on an on off pattern of (3 * 2) and (2)
+ for the symbol (plus the numeric value of the last number used for both cases), this fake symbol will be added at intervals
+ of (3) and (2^3) thus adding fake data onto the text.
+
+Example: key(2,3) using just alphabet and not ASCII: "a man walking" = "a fmahn nwapvlkxindg"

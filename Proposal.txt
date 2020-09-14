@@ -1,0 +1,2 @@
+The application can take in text and encode that text in a verity of ways, or ciphers, while outputting the changed text and the key(the order, amount, and techniques used to encode the message so that it can be decoded by anyone who has the key).
+This application will help with encoding/decoding any text with custom user specifications.
