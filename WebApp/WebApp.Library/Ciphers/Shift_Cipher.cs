@@ -17,6 +17,8 @@ namespace WebApp.Library.Ciphers
             int[] letterNumbers = new int[arrLength];
 
             //each letter in string is given a number
+            //note that this method is also used in Vigenere_Cipher.Encode
+            //separate into another class in the future
             for (int i = 0; i < arrLength; i++)
             {
                 for(int k = 0; k < printLength; k++)
