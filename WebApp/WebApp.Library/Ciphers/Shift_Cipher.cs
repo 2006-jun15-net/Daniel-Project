@@ -10,7 +10,7 @@ namespace WebApp.Library.Ciphers
             ":;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[" + "\\" + "]^_`" + 
             "abcdefghijklmnopqrstuvwxyz{|}~";
 
-        public string ShiftBy(string x, int num)
+        public string Encode(string x, int num)
         {
             int arrLength = x.Length;
             int printLength = printableCharacters.Length;
@@ -53,11 +53,11 @@ namespace WebApp.Library.Ciphers
             return result;
         }
 
-        public string Undo_ShiftBy(string x, int num)
+        public string Decode(string x, int num)
         {
             int temp = num * (-1);
 
-            return ShiftBy(x, temp); ;
+            return Encode(x, temp); ;
         }
     }
 }

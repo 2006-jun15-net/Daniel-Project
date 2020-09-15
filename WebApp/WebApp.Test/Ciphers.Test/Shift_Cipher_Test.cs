@@ -9,7 +9,7 @@ namespace WebApp.Test.Ciphers.Test
 
         //ASCII: 32-126
         [Fact]
-        public void ShiftBy_smallNumber()
+        public void Encode_smallNumber()
         {
             string input = "dog";
             string expected = "grj";
@@ -17,11 +17,11 @@ namespace WebApp.Test.Ciphers.Test
 
             var shift = new Shift_Cipher();
 
-            Assert.Equal(expected, shift.ShiftBy(input, shiftAmount));
+            Assert.Equal(expected, shift.Encode(input, shiftAmount));
         }
 
         [Fact]
-        public void ShiftBy_positiveEdgeNumber()
+        public void Encode_positiveEdgeNumber()
         {
             string input = "~}|";
             string expected = "! ~";
@@ -29,11 +29,11 @@ namespace WebApp.Test.Ciphers.Test
 
             var shift = new Shift_Cipher();
 
-            Assert.Equal(expected, shift.ShiftBy(input, shiftAmount));
+            Assert.Equal(expected, shift.Encode(input, shiftAmount));
         }
 
         [Fact]
-        public void Shiftby_bigPositiveNumber()
+        public void Encode_bigPositiveNumber()
         {
             string input = "a person goes for a WALK";
             string expected = "=[LANOKJ[CKAO[BKN[=[3|('";
@@ -41,11 +41,11 @@ namespace WebApp.Test.Ciphers.Test
 
             var shift = new Shift_Cipher();
 
-            Assert.Equal(expected, shift.ShiftBy(input, shiftAmount));
+            Assert.Equal(expected, shift.Encode(input, shiftAmount));
         }
 
         [Fact]
-        public void Shiftby_smallNegativeNumber()
+        public void Encode_smallNegativeNumber()
         {
             string input = "person";
             string expected = "mboplk";
@@ -53,11 +53,11 @@ namespace WebApp.Test.Ciphers.Test
 
             var shift = new Shift_Cipher();
 
-            Assert.Equal(expected, shift.ShiftBy(input, shiftAmount));
+            Assert.Equal(expected, shift.Encode(input, shiftAmount));
         }
 
         [Fact]
-        public void ShiftBy_negativeEdgeNumber()
+        public void Encode_negativeEdgeNumber()
         {
             string input = "! ~";
             string expected = "~}|";
@@ -65,12 +65,12 @@ namespace WebApp.Test.Ciphers.Test
 
             var shift = new Shift_Cipher();
 
-            Assert.Equal(expected, shift.ShiftBy(input, shiftAmount));
+            Assert.Equal(expected, shift.Encode(input, shiftAmount));
         }
 
 
         [Fact]
-        public void Shiftby_bigNegativeNumber()
+        public void Encode_bigNegativeNumber()
         {
             string input = "person";
             string expected = "aVcd`_";
@@ -78,11 +78,11 @@ namespace WebApp.Test.Ciphers.Test
 
             var shift = new Shift_Cipher();
 
-            Assert.Equal(expected, shift.ShiftBy(input, shiftAmount));
+            Assert.Equal(expected, shift.Encode(input, shiftAmount));
         }
 
         [Fact]
-        public void Undo_Shiftby_smallNumber()
+        public void Decode_smallNumber()
         {
             string input = "grj";
             string expected = "dog";
@@ -90,7 +90,7 @@ namespace WebApp.Test.Ciphers.Test
 
             var shift = new Shift_Cipher();
 
-            Assert.Equal(expected, shift.Undo_ShiftBy(input, shiftAmount));
+            Assert.Equal(expected, shift.Decode(input, shiftAmount));
         }
 
     }
