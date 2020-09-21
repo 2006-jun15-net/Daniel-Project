@@ -1,8 +1,21 @@
-﻿@{
+﻿@model  WebApp.App.Models.TextBoxValue
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    @using (Html.BeginForm("Encode", "Home", FormMethod.Post))
+    {
+<div>
+    @Html.TextAreaFor(data => data.Value)
+</div>
+<div>
+    @Html.TextBoxFor(data => data.Key)
+    <button type="submit">Use Cipher</button>
+</div>
+    }
 </div>
